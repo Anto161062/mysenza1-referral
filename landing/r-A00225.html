@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invito personale – MySenza1</title>
+  <script>
+    const redirectUrl = "https://anto161062.github.io/catalogo/";
+    const scriptUrl = "INSERISCI_LA_TUA_API_GOOGLE"; // sostituire appena pronto
+
+    const data = {
+      qr: "A00225",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    };
+
+    fetch(scriptUrl, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    setTimeout(() => {
+      window.location.href = redirectUrl;
+    }, 2500);
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background-color: #fffbee;
+    }
+    h1 {
+      font-size: 1.6rem;
+      color: #222;
+    }
+    p {
+      font-size: 1rem;
+      max-width: 500px;
+      margin: 1rem auto;
+    }
+    .code {
+      background: #222;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Qualcuno ti ha invitato a scoprire MySenza1</h1>
+  <p>Non è pubblicità. È un profumo che ha colpito qualcuno a cui piaci.
+    Se sei qui, è perché una persona che lo ha provato ha scelto di regalarti questo invito.
+  </p>
+  <p>Guarda il catalogo, se qualcosa ti resta in mente, segui il profumo.
+    Ordina come vuoi. In automatico, chi ti ha invitato riceverà un credito.
+  </p>
+  <p><span class="code">Codice Referente: A00225</span></p>
+  <p>Tra pochi secondi sarai reindirizzato al catalogo.</p>
+</body>
+</html>
