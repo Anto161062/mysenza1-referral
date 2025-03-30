@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invito personale – MySenza1</title>
-  <script>
-    const redirectUrl = "https://anto161062.github.io/catalogo/";
-    const scriptUrl = "https://script.google.com/macros/s/AKfycbzRQ8qARuwrPF8iB-U2UrCWjygCHIdP-DBP_zeq0y2SuLbnGbOyBL50v6cYeZFa3buJ8Q/exec";
-
-    const data = {
-      qr: "A00225",
-      userAgent: navigator.userAgent
-    };
-
-    fetch(scriptUrl, {
-      method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-
-    setTimeout(() => {
-      window.location.href = redirectUrl;
-    }, 2500);
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySenza1 - Invito</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf9f3;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       text-align: center;
-      padding: 40px;
-      background-color: #fffbee;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      padding: 20px;
     }
     h1 {
-      font-size: 1.6rem;
-      color: #222;
+      font-size: 24px;
+      margin-bottom: 30px;
     }
     p {
-      font-size: 1rem;
-      max-width: 500px;
-      margin: 1rem auto;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 10px 0;
     }
-    .code {
-      background: #222;
-      color: #fff;
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
+    .countdown {
+      margin-top: 30px;
+      font-size: 22px;
       font-weight: bold;
     }
   </style>
+  <script>
+    setTimeout(function() {
+      window.location.href = "https://anto161062.github.io/catalogo/";
+    }, 9000); // 9 secondi
+  </script>
 </head>
 <body>
-  <h1>Qualcuno ti ha invitato a scoprire MySenza1</h1>
-  <p>Non è pubblicità. È un profumo che ha colpito qualcuno a cui piaci.
-    Se sei qui, è perché una persona che lo ha provato ha scelto di regalarti questo invito.
-  </p>
-  <p>Guarda il catalogo, se qualcosa ti resta in mente, segui il profumo.
-    Ordina come vuoi. In automatico, chi ti ha invitato riceverà un credito.
-  </p>
-  <p><span class="code">Codice Referente: A00225</span></p>
-  <p>Tra pochi secondi sarai reindirizzato al catalogo.</p>
+  <div class="container">
+    <h1>Qualcuno ti ha invitato a conoscere MySenza1</h1>
+    <p><strong>Ci sono profumi che parlano da soli.</strong></p>
+    <p>Non uno solo, ma una collezione intera.<br>
+    Chi li ha provati non se l’aspettava:<br>
+    sono piaciuti, hanno sorpreso, hanno lasciato il segno.</p>
+    <p><strong>Adesso tocca a te decidere.</strong><br>
+    Niente filtri, niente promesse.<br>
+    Solo profumi veri.</p>
+    <div class="countdown">🕐 Tra pochi secondi sarai nel catalogo.</div>
+  </div>
 </body>
 </html>
