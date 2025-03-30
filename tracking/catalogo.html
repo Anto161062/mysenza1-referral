@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySenza1 - Invito</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Georgia', serif;
+      background-color: #fdfcf9;
+      color: #111;
+    }
+    .container {
+      max-width: 700px;
+      padding: 40px;
+      text-align: center;
+      line-height: 1.8;
+      font-size: 1.6em;
+    }
+    .container h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .container .countdown {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+    .catalogo-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #222;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+  </style>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const src = urlParams.get('src') || 'promo';
 
+    const redirectMap = {
+      promo: 'https://anto161062.github.io/mysenza1-referral/index.html',
+      catalogo: 'https://anto161062.github.io/mysenza1-referral/catalogo/catalogo.pdf'
+    };
+
+    const destination = redirectMap[src] || redirectMap['promo'];
+
+    fetch("https://script.google.com/macros/s/AKfycbx1Sa1d842Ye7RFelm1KabOlSu6qwU1KmMfACThbcVJXouNXOVEJBFu28kjoO_TKpMrqw/exec?src=" + src)
+      .catch(console.error);
+
+    setTimeout(() => {
+      window.location.href = destination;
+    }, 10000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>MySenza1</h1>
+    <p>Mi sono piaciuti immediatamente ed è un piacere farteli conoscere.</p>
+    <p>Tra qualche secondo ti appare il contenuto</p>
+    <p>che ho pensato potesse piacerti e farti scoprire qualcosa di nuovo.</p>
+    <p>Nel materiale che si apre trovi tutte le info per acquistare o approfondire</p>
+    <p>Per qualsiasi info 371 777 1328</p>
+    <div class="countdown">🕐 <strong>Tra pochi secondi sarai reindirizzato.</strong></div>
+  </div>
+</body>
+</html>
